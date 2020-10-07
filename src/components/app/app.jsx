@@ -9,7 +9,6 @@ import GameOverScreen from "../game-over-screen/game-over-screen";
 import WinScreen from "../win-screen/win-screen";
 
 const App = (props) => {
-  // eslint-disable-next-line react/prop-types
   const {errorsCount} = props;
 
   return (
