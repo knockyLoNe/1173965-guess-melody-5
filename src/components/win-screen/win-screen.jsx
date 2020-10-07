@@ -10,7 +10,6 @@ const WinScreen = () => {
       <button className="replay" type="button">Сыграть ещё раз</button>
     </section>
   );
-
 };
 
 export default WinScreen;

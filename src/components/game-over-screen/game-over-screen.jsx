@@ -11,7 +11,6 @@ const GameOverScreen = () => {
     </section>
 
   );
-
 };
 
 export default GameOverScreen;
