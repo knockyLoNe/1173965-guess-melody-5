@@ -1,12 +1,7 @@
 # Учебный проект «Угадай мелодию» [![Build status][travis-image]][travis-url]
 
-<<<<<<< HEAD
-- Студент: [Nikita Khaustov](https://up.htmlacademy.ru/react/5/user/1173965).
-- - Наставник: [Фёдор Громов](https://htmlacademy.ru/profile/ted_gromov).
-=======
 * Студент: [Nikita Khaustov](https://up.htmlacademy.ru/react/5/user/1173965).
 * Наставник: [Фёдор Громов](https://htmlacademy.ru/profile/ted_gromov).
->>>>>>> 28e8e15... module2-task1
 
 ---
 
