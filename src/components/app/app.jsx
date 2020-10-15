@@ -52,7 +52,7 @@ const App = (props) => {
         <Route exact path="/game">
           <GameScreen
             errorsCount={errorsCount}
-            question={questions}
+            questions={questions}
           />
         </Route>
       </Switch>

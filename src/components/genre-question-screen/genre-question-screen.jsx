@@ -7,7 +7,7 @@ class GenreQuestionScreen extends PureComponent {
     super(props);
 
     this.state = {
-      answer: [false, false, false, false],
+      answers: [false, false, false, false],
     };
   }
 
@@ -29,7 +29,7 @@ class GenreQuestionScreen extends PureComponent {
 
           <svg xmlns="http://www.w3.org/2000/svg" className="timer" viewBox="0 0 780 780">
             <circle className="timer__line" cx="390" cy="390" r="370"
-              style="filter: url(#blur); transform: rotate(-90deg) scaleY(-1); transform-origin: center"/>
+              style={{filter: `url(#blur)`, transform: `rotate(-90deg) scaleY(-1)`, transformOrigin: `center`}}/>
           </svg>
 
           <div className="game__mistakes">
