@@ -19,6 +19,11 @@ class GameScreen extends PureComponent {
     const {questions} = this.props;
     const {step} = this.state;
     const question = questions[step];
+    const onAnswer = () => {
+      this.setState((prevState) => ({
+        step: prevState.step + 1,
+      }));
+    };
 
     if (step >= questions.length || !question) {
       return (
@@ -30,22 +35,14 @@ class GameScreen extends PureComponent {
         return (
           <ArtistQuestionScreen
             question={question}
-            onAnswer={() => {
-              this.setState((prevState) => ({
-                step: prevState.step + 1,
-              }));
-            }}
+            onAnswer={onAnswer}
           />
         );
       case GameType.GENRE:
         return (
           <GenreQuestionScreen
             question={question}
-            onAnswer={() => {
-              this.setState((prevState) => ({
-                step: prevState.step + 1,
-              }));
-            }}
+            onAnswer={onAnswer}
           />
         );
     }
