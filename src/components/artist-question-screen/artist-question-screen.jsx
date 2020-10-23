@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import artistQuestionProp from "./artist-question.prop";
 
 const ArtistQuestionScreen = (props) => {
-  const {onAnswer, question, renderPlayes} = this.props;
+  const {onAnswer, question, renderPlayer} = props;
   const {
     answers,
     song,

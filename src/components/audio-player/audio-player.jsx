@@ -1,5 +1,6 @@
-import React, {PureComponent, Fragment} from "react";
+import React, {PureComponent, Fragment, createRef} from "react";
 import PropTypes from "prop-types";
+
 
 export default class AudioPlayer extends PureComponent {
   constructor(props) {
@@ -38,7 +39,7 @@ export default class AudioPlayer extends PureComponent {
         <button className={`track__button track__button--${isPlaying ? `pause` : `play`}`}
           type="button"
           disabled={isLoading}
-          onClick={onPlayButtinClick}
+          onClick={onPlayButtonClick}
         />
         <div className="track__status">
           <audio
@@ -61,7 +62,7 @@ export default class AudioPlayer extends PureComponent {
   }
 }
 
-AudioPlayer.PropTypes = {
+AudioPlayer.propTypes = {
   isPlaying: PropTypes.bool.isRequired,
   onPlayButtonClick: PropTypes.func.isRequired,
   src: PropTypes.string.isRequired,
