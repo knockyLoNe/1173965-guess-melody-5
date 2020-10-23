@@ -12,23 +12,12 @@ class GenreQuestionScreen extends PureComponent {
   }
 
   render() {
-    const {onAnswer, question} = this.props;
+    const {onAnswer, question, renderPlayer} = this.props;
     const {answers: userAnswers} = this.state;
     const {
       answers,
       genre,
     } = question;
-    const onSubmit = (evt) => {
-      evt.preventDefault();
-      onAnswer(question, this.state.answers);
-    };
-    const onChange = (evt, i) => {
-      const value = evt.target.checked;
-
-      this.setState({
-        answers: [...userAnswers.slice(0, i), value, ...userAnswers.slice(i + 1)],
-      });
-    };
 
     return (
       <section className="game game--genre">
@@ -57,12 +46,7 @@ class GenreQuestionScreen extends PureComponent {
           >
             {answers.map((answer, i) => (
               <div key={`${i}-${answer.src}`} className="track">
-                <button className="track__button track__button--play" type="button"></button>
-                <div className="track__status">
-                  <audio
-                    src={answer.src}
-                  />
-                </div>
+                {renderPlayer(answer.src, i)}
                 <div className="game__answer">
                   <input className="game__input visually-hidden" type="checkbox" name="answer" value={`answer-${i}`}
                     id={`answer-${i}`}
