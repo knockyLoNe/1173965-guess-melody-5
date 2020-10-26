@@ -12,7 +12,7 @@ class GenreQuestionScreen extends PureComponent {
   }
 
   render() {
-    const {onAnswer, question, renderPlayer} = this.props;
+    const {question, renderPlayer} = this.props;
     const {answers: userAnswers} = this.state;
     const {
       answers,
