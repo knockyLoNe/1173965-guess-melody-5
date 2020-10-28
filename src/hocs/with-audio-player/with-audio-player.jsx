@@ -9,11 +9,13 @@ const withActivePlayer = (Component) => {
       this.state = {
         activePlayerId: 0,
       };
+
+      this.handleButtonClick = this.handleButtonClick.bind(this);
     }
 
     handleButtonClick(id) {
       this.setState({
-        activePlayerId: this.state.activePlayerId.bind(this) === id ? -1 : id
+        activePlayerId: this.state.activePlayerId === id ? -1 : id
       });
     }
 
