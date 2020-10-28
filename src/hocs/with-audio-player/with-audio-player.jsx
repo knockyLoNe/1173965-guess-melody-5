@@ -27,7 +27,7 @@ const withActivePlayer = (Component) => {
             <AudioPlayer
               src={src}
               isPlaying={id === activePlayerId}
-              onPlayButtonClick={() => this.handleButtonClick(id)}
+              onPlayButtonClick={() => this.handleButtonClick.bind(id)}
             />
           );
         }}
