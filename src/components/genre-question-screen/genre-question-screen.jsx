@@ -12,7 +12,7 @@ class GenreQuestionScreen extends PureComponent {
   }
 
   render() {
-    const {question, renderPlayer} = this.props;
+    const {question, renderPlayer, children} = this.props;
     const {answers: userAnswers} = this.state;
     const {
       answers,
@@ -37,6 +37,7 @@ class GenreQuestionScreen extends PureComponent {
             <div className="wrong"></div>
             <div className="wrong"></div>
           </div>
+          {children}
         </header>
 
         <section className="game__screen">
@@ -68,6 +69,7 @@ GenreQuestionScreen.propTypes = {
   onAnswer: PropTypes.func.isRequired,
   question: genreQuestionProp,
   renderPlayer: PropTypes.func.isRequired,
+  children: PropTypes.element.isRequired,
 };
 
 export default GenreQuestionScreen;
